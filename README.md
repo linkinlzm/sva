@@ -18,5 +18,5 @@ sudo ./upx64 private.pem
 ```
 - Fine all encrypted files
 ```
-find / -name '*encrypted'
+sudo find / -name '*encrypted'
 ```
