@@ -20,6 +20,15 @@ sudo ./upx64 private.pem
 ```
 sudo find / -name '*encrypted'
 ```
+## How to recover the files
+- Find all encrypted files
+```
+./sort_files.sh ./encfiles/ > sorted_list
+```
+- Get some enc-file paths for next step
+```
+head -3 sorted_list
+```
 - How to find the seed for decryption
 <p>The script will parse the modification time of the directory. Then it will brute force to find the IV for decryption.</p>
 
@@ -27,3 +36,8 @@ sudo find / -name '*encrypted'
 python decrypter.py -f ./encfiles/.wireshark/recent_common.encrypted
 ```
 <p>The output should be [*] Seed: 1512254081</p>
+
+- To decrypt the files
+```
+python decrypter.py -s 1512254081 -l sorted_list -e error_list
+```
