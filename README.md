@@ -16,3 +16,7 @@ You need to download a new repo before decryption.
 ```
 sudo ./upx64 private.pem
 ```
+- Fine all encrypted files
+```
+find / -name '*encrypted'
+```
