@@ -9,7 +9,7 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 ## How to run
 - To encrypt the files:
 ```
-sudo ./upx64 encrypt private.pem
+sudo ./upx64 encrypt public.pem
 ```
 - To decrypt the files:
 You need to download a new repo before decryption.
