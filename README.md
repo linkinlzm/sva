@@ -22,6 +22,7 @@ sudo find / -name '*encrypted'
 ```
 - How to find the seed for decryption
 <p>The script will parse the modification time of the directory. Then it will brute force to find the IV for decryption.</p>
+
 ```
 python decrypter.py -f ./encfiles/.wireshark/recent_common.encrypted
 ```
