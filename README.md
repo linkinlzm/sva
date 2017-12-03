@@ -35,9 +35,9 @@ head -3 sorted_list
 ```
 python decrypter.py -f ./encfiles/.wireshark/recent_common.encrypted
 ```
-<p>The output should be [*] Seed: 1512254081</p>
+<p>The output should be [*] Seed: 1512259893</p>
 
 - To decrypt the files
 ```
-python decrypter.py -s 1512254081 -l sorted_list -e error_list
+python decrypter.py -s 1512259893 -l sorted_list -e error_list
 ```
