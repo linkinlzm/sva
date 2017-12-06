@@ -73,7 +73,8 @@ def find_seed(filepath):
             key, iv = get_key_iv(lcg)
             if iv[:15] == iv_file[:15]:
                 a = ts - i
-                print("%s" %a)
+                print("SEED: %s" %a)
+                print("KEY: %s" %key)
                 return ts - i
 
     return None
