@@ -72,6 +72,8 @@ def find_seed(filepath):
         for file_idx in range(file_idx_start, file_idx_start + 10000):
             key, iv = get_key_iv(lcg)
             if iv[:15] == iv_file[:15]:
+                a = ts - i
+                print("%s" %a)
                 return ts - i
 
     return None
