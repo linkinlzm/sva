@@ -1,0 +1,6 @@
+According to the previous analysis and the result of reverse engineering, it is easy to figure out a way to decrypt all encrypted files without paying to the attacker. The attacker used system time as seed to generate the initial value(IV) and key for AES encryption. It is unwise to use system time as a seed to generate pseudorandom numbers for a cryptosystem, because it is totally predictable. Anyone will generate the same results if they use the same time as seed, which means that an attacker can easily brute force to get the key or IV and the cryptosystem will fail. However, the defects in this ransomware will greatly help us to decrypt all files without paying. 
+Totally, three parameters are needed to decrypt a file encrypted with 
+
+
+
+Anyone can easily obtain time stamps of files in Linux system, which mean anyone could use 
